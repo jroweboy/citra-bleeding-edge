@@ -54,6 +54,7 @@ Q_IMPORT_PLUGIN(QWindowsIntegrationPlugin);
 
 GMainWindow::GMainWindow() : config(new Config()), emu_thread(nullptr) {
     Pica::g_debug_context = Pica::DebugContext::Construct();
+
     ui.setupUi(this);
     statusBar()->hide();
 
@@ -66,6 +67,7 @@ GMainWindow::GMainWindow() : config(new Config()), emu_thread(nullptr) {
     RestoreUIState();
 
     ConnectWidgetEvents();
+
     setWindowTitle(QString("Citra | %1-%2").arg(Common::g_scm_branch, Common::g_scm_desc));
     show();
 
