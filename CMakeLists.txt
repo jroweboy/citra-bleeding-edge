@@ -305,7 +305,7 @@ get_git_head_revision(GIT_REF_SPEC GIT_REV)
 git_describe(GIT_DESC --always --long --dirty)
 git_branch_name(GIT_BRANCH)
 
-enable_testing()
+#enable_testing()
 add_subdirectory(externals)
 add_subdirectory(src)
 
